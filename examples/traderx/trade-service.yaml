@@ -1,0 +1,80 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: trade-service
+  tags: [java]
+spec:
+  type: service
+  lifecycle: experimental
+  owner: traderx
+  system: traderx
+  providesApis: [trade-service-api]
+  consumesApis:
+  - account-service-api
+  - reference-data-service
+  - trade-feed-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: trade-service-api
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: traderx
+  system: traderx
+  definition: |
+    openapi: 3.0.1
+    info:
+      title: FINOS TraderX Trade Service
+      version: 0.1.0
+    servers:
+      - url: ''
+    paths:
+      /trade/:
+        post:
+          tags:
+            - trade-order-controller
+          operationId: createTradeOrder
+          requestBody:
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/TradeOrder'
+            required: true
+          responses:
+            '200':
+              description: OK
+              content:
+                'application/json':
+                  schema:
+                    $ref: '#/components/schemas/TradeOrder'
+    components:
+      schemas:
+        TradeOrder:
+          type: object
+          properties:
+            id:
+              type: string
+              example: 'ABC-123-XYZ'
+            state:
+              type: string
+              example: 'New'
+            security:
+              type: string
+              example: 'ADBE'
+            quantity:
+              type: integer
+              format: int32
+              example: 100
+            accountID:
+              type: integer
+              format: int32
+              example: 22214
+            side:
+              type: string
+              enum:
+                - Buy
+                - Sell

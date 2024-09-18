@@ -72,12 +72,31 @@ scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options
 
 catalog:
-  import:
-    entityFilename: catalog-info.yaml
-    pullRequestBranchName: backstage-integration
+  # import:
+  #   entityFilename: catalog-info.yaml
+  #   pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location]
+    - allow: [Group, Component, System, API, Resource, Location]
   locations:
+    - type: file
+      target: ../../examples/traderx/account-service.yaml
+    - type: file
+      target: ../../examples/traderx/core.yaml
+    - type: file
+      target: ../../examples/traderx/people-service.yaml
+    - type: file
+      target: ../../examples/traderx/position-service.yaml
+    - type: file
+      target: ../../examples/traderx/reference-data.yaml
+    - type: file
+      target: ../../examples/traderx/trade-feed.yaml
+    - type: file
+      target: ../../examples/traderx/trade-processor.yaml
+    - type: file
+      target: ../../examples/traderx/trade-service.yaml
+    - type: file
+      target: ../../examples/traderx/web.yaml
+
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
       target: ../../examples/entities.yaml

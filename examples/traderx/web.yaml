@@ -1,0 +1,38 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: web-frontend-angularjs
+  tags: [javascript, angularjs]
+spec:
+  type: website
+  lifecycle: experimental
+  owner: traderx
+  system: traderx
+  consumesApis:
+    - account-service-api
+    - people-service-api
+    - position-service-api
+    - reference-data-api
+    - trade-feed-api
+    - trade-service-api
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: web-frontend-react
+  tags: [javascript, react]
+spec:
+  type: website
+  lifecycle: experimental
+  owner: traderx
+  system: traderx
+  consumesApis:
+  - account-service-api
+  - people-service-api
+  - position-service-api
+  - reference-data-api
+  - trade-feed-api
+  - trade-service-api

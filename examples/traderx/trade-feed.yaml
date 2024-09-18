@@ -1,0 +1,28 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: trade-feed
+  tags: [javascript, nodejs]
+spec:
+  type: service
+  lifecycle: experimental
+  owner: traderx
+  system: traderx
+  providesApis: [trade-feed-api]
+  # TODO: Add Trade Processor async API here
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: trade-feed-api
+spec:
+  type: asyncapi
+  lifecycle: experimental
+  owner: traderx
+  system: traderx
+  definition: | # FIXME: Add proper typings here
+    channels: {}
+    operations: {}
+

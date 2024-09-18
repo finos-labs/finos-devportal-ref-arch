@@ -5,6 +5,8 @@ kind: Component
 metadata:
   name: web-frontend-angularjs
   tags: [javascript, angularjs]
+  annotations:
+    backstage.io/source-location: url:https://github.com/finos/traderX/tree/main/web-front-end/angular
 spec:
   type: website
   lifecycle: experimental
@@ -24,6 +26,8 @@ kind: Component
 metadata:
   name: web-frontend-react
   tags: [javascript, react]
+  annotations:
+    backstage.io/source-location: url:https://github.com/finos/traderX/tree/main/web-front-end/react
 spec:
   type: website
   lifecycle: experimental

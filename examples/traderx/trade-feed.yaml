@@ -5,6 +5,8 @@ kind: Component
 metadata:
   name: trade-feed
   tags: [javascript, nodejs]
+  annotations:
+    backstage.io/source-location: url:https://github.com/finos/traderX/tree/main/trade-feed
 spec:
   type: service
   lifecycle: experimental

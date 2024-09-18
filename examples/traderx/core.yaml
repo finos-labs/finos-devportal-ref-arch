@@ -22,6 +22,8 @@ kind: Resource
 metadata:
   name: database
   description: Database instance for all services
+  annotations:
+    backstage.io/source-location: url:https://github.com/finos/traderX/tree/main/database
 spec:
   type: database
   owner: traderx

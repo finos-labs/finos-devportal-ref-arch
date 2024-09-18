@@ -5,6 +5,8 @@ kind: Component
 metadata:
   name: trade-service
   tags: [java]
+  annotations:
+    backstage.io/source-location: url:https://github.com/finos/traderX/tree/main/trade-service
 spec:
   type: service
   lifecycle: experimental

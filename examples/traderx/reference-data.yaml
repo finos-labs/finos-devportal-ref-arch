@@ -5,6 +5,8 @@ kind: Component
 metadata:
   name: reference-data
   tags: [javascript, nodejs]
+  annotations:
+    backstage.io/source-location: url:https://github.com/finos/traderX/tree/main/reference-data
 spec:
   type: service
   lifecycle: experimental

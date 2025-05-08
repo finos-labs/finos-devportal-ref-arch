@@ -1,0 +1,7 @@
+SPDXVersion: SPDX-2.0
+DataLicense: CC0-1.0
+Creator: FINOS DevPortal Reference Architecture Authors
+PackageName: finos-devportal-ref-arch
+PackageOriginator: FINOS
+PackageHomePage: https://github.com/finos/finos-devportal-ref-arch
+PackageLicenseDeclared: Apache-2.0
